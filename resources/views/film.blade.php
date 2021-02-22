@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -80,6 +81,7 @@
                         </div>
 
                     </div>
+                   
                 </div>
                 <h2 class="title-header">Find Movies, TV shows and more</h2>
                 <div id="search-home">
@@ -94,6 +96,79 @@
                     </div>
                 </div>
             </header>
+            <input type="checkbox" name="nav-input" id="nav-mobile-input"  hidden/>
+            <label for="nav-mobile-input" class="nav-overplay"> </label>
+            <header id="header-mobile">
+                <div class="content-header-mobile">
+                    <div class="header-nav-mobile">
+                        <label for="nav-mobile-input" class="menu-mobile">
+                            <i class="fas fa-bars menu-bar" ></i>
+                           
+                        </label>
+                        <div class="logo"><a href="" class="link-home"><img src="/assets/images/logo.png" alt="logo"></a></div>
+                        <div class="btn-login-log">
+                             <button class="login"><i class="far fa-user icon-login"></i></button>
+                        </div>
+                    </div>
+                     <div class="menu-mobile-list">
+                                <label for="nav-mobile-input" class="close-menu"><i class="fas fa-angle-left"></i> Close menu</label>
+                                <ul class="list-item-menu">
+                                    <li class="item-menu">
+                                        <a href="/" class="item-menu-link">Home</a>
+                                    </li>
+                                     <li class="item-menu">
+                                        <a href="#" class="item-menu-link"> 
+                                            <span>Genre</span>
+                                            <span class="link-icon"><i class="fas fa-plus-square icon-plus icon"></i></span>
+                                           
+                                        </a>
+                                       
+                                        <ul class="sub-list-item clearfix">
+                                            @foreach ($genre as $item)
+                                                <li class="sub-item-menu">
+                                                    <a href="{{url('/')}}/country/{{str_replace(" ", "-",strtolower($item->name))}}" class="sub-link-item-menu">{{ strlen($item->name) > 18 ? substr($item->name, 0, 18) . '...':$item->name }}</a>
+                                                    
+                                                </li>
+                                            @endforeach
+                                           
+                                        </ul>
+                                       
+                                    </li>
+                                     <li class="item-menu">
+                                        <a href="#" class="item-menu-link"> <span> Country</span>
+                                             <span class="link-icon"><i class="fas fa-plus-square icon-plus icon"></i></span>
+                                        </a>
+                                         <ul class="sub-list-item clearfix">
+                                            @foreach ($country as $item)
+                                                <li class="sub-item-menu">
+                                                    <a href="{{url('/')}}/country/{{str_replace(" ", "-",strtolower($item->name))}}" class="sub-link-item-menu">{{$item->name}}</a>
+                                                </li>
+                                            @endforeach
+                                           
+                                        </ul>
+                                    </li>
+                                     <li class="item-menu">
+                                        <a href="" class="item-menu-link">Movies</a>
+                                    </li>
+                                     <li class="item-menu">
+                                        <a href="" class="item-menu-link">TV shows</a>
+                                    </li>
+                                     <li class="item-menu">
+                                        <a href="" class="item-menu-link">Top IMDB</a>
+                                    </li>
+                                     <li class="item-menu">
+                                        <a href="" class="item-menu-link">Android App</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                    <div class="search-mobile">
+                        <span class="wrap-icon-search"><i class="fas fa-search"></i></span>
+                        <input type="text" name="search" id="search-mobile" placeholder="Enter keywords">
+                    </div>
+                </div>
+            </header>
+            
             <div id="content-app">
                 <div class="content-wrap">
                     <div class="content-desc">
@@ -102,6 +177,11 @@
                         free, you can find your favorite serie and begin to watch tv shows online in HD with English subtitle without having an account.
 
                     </div>
+                    <button class="btn-more">
+                        <i class="fas fa-plus ic-plus"></i>
+                        <i class="fas fa-minus ic-minus"></i>
+                        <span class="text-btn-more">more</span> 
+                    </button>
 
                     <div class="tranding">
                         <h3>Trending</h3>
@@ -245,6 +325,50 @@
     </div>
     <script>
         $(document).ready(function(){
+            $(".menu-mobile").click(function(){
+                
+                if($('#nav-mobile-input').prop("checked")){
+                    $(".menu-mobile-list").css('transform', 'translate(-100%)');
+                    $(".menu-bar").css('display', 'inline-block');
+                }else{
+                    $(".menu-mobile-list").css('transform', 'translate(0)');
+                    $(".menu-mobile-list").css('opacity', '1');
+                }
+            })
+            $(".nav-overplay").click(function(){
+                if($('#nav-mobile-input').prop("checked")){
+                    $(".menu-mobile-list").css('transform', 'translate(-100%)');
+                    $(".menu-bar").css('display', 'inline-block');
+                }
+
+            })
+            $(".close-menu").click(function(){
+                $(".menu-mobile-list").css('transform', 'translate(-100%)');
+                $(".menu-bar").css('display', 'inline-block');
+            })
+           
+            $('span.link-icon').click(function(){
+                $(this).parent().parent().find($('.sub-list-item')).slideToggle('fast');
+                $(this).find($(".icon")).toggleClass('fa-plus-square fa-minus-square');
+            })
+            
+            $(".btn-more").click(function(){
+                // alert($(".btn-more").text().trim());
+               if($(".text-btn-more").text() == 'more'){
+                   $('.ic-plus').css('display', 'none');
+                   $('.ic-minus').css('display', 'inline-block');
+                   $(".text-btn-more").text('less');
+                   $('.content-desc').css('display', 'block');
+                  
+               }else{
+                   $('.ic-plus').css('display', 'inline-block');
+                   $('.ic-minus').css('display', 'none');
+                   $(".text-btn-more").text('more');
+                   $('.content-desc').css('display', '-webkit-box');
+                  
+               }
+                
+            })
             $('#search-movie').keyup(function(event){
                 if(event.keyCode == 13){
                     $keyword = $('#search-movie').val();
@@ -256,6 +380,14 @@
             $(".btn-search").click(function(){
                 $keyword = $('#search-movie').val();
                 location.href = "{{url('/')}}/page-search/" + $keyword.toLowerCase().replace(/ /g,'-').replace(/[^\w-]+/g,'') ;
+            })
+            $('#search-mobile').keyup(function(event){
+                if(event.keyCode == 13){
+                    $keyword = $('#search-mobile').val();
+                    location.href = "{{url('/')}}/page-search/" + $keyword.toLowerCase().replace(/ /g,'-').replace(/[^\w-]+/g,'') ;
+                    // search($keyword);
+                }
+               
             })
 
             function search($keyword){

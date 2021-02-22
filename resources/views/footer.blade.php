@@ -1,11 +1,11 @@
 <footer id="footer">
     <div class="footer-content">
         <div class="row">
-            <div class="col-3 footer-logo">
+            <div class="col-sm-3 col-0 footer-logo">
                 <a href="#"><img src="/assets/images/logo.png" alt=""></a>
                 <span class="logo-name">©Mivies.to</span>
             </div>
-            <div class="col-5 footer-about">
+            <div class="col-sm-5 col-8 footer-about">
                 <p>HiMovies.to is a Free Movies streaming site with zero ads. We let you watch movies online without having to register or paying, with over 10000 movies and TV-Series. You can also Download full movies from HiMovies.to and watch
                     it later if you want.</p>
                 <ul class="list-footer-link">
@@ -26,7 +26,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-4 ">
+            <div class="col-sm-4 col-4">
                 <div class="footer-notice">
                     <span class="notice-content">
                             HiMovies.to does not store any files on our server, we only linked to the media which is hosted on 3rd party services.
@@ -35,6 +35,9 @@
 
             </div>
 
+        </div>
+        <div class="footer-logo-mobile">
+            © HiMovies.to
         </div>
     </div>
 

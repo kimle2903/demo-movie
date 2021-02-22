@@ -47,7 +47,7 @@
                         <p class="desc ">{{$filmDetail->desciption}}</p>
                         <div class="element ">
                             <div class="row ">
-                                <div class="col-5 ">
+                                <div class="col-lg-5 col-md-5  col-12 ">
                                     <p class="released "><span class="font-400">Released:</span> {{$filmDetail->released}}</p>
                                     <div class="genre-wrap ">
                                         <span class="font-400">Genre:</span>
@@ -75,7 +75,7 @@
                                        {{strlen($filmDetail->cats)> 0 ?$filmDetail->cats: "N/A" }}
                                     </div>
                                 </div>
-                                <div class="col-6 ">
+                                <div class="col-lg-6 col-md-6  col-12">
                                     <p class="time "> <span class="font-400">Duration:</span> {{ strlen($film->time)> 0 ? $film->time: "N/A"}}</p>
                                     <p class="country ">
                                         <span class="font-400">Country:</span><a href=" ">{{strlen($filmDetail->country)> 0 ? $filmDetail->country: "N/A"}}</a>

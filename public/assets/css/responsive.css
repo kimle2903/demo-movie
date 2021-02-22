@@ -1,0 +1,394 @@
+@media screen and (max-width: 1199px) {
+    #header-mobile {
+        display: block;
+    }
+    #header {
+        display: none;
+    }
+    .menu-mobile {
+        top: 0;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        left: 0;
+        display: block;
+        line-height: 60px;
+    }
+    .menu-mobile .menu-bar {
+        font-size: 20px;
+        color: #fff;
+    }
+    .menu-mobile-list {
+        /* height: 100vh; */
+        width: 300px;
+        background-color: #111;
+        color: #fff;
+        text-align: left;
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        transform: translate(-100%);
+        /* opacity: 0; */
+        transition: all linear 0.2s;
+        overflow: scroll;
+    }
+    .menu-mobile-list .close-menu {
+        height: 35px;
+        line-height: 36px;
+        border: none;
+        border-radius: 20px;
+        padding: 0px 13px;
+        margin-top: 28px;
+        margin-left: 20px;
+        outline: none;
+        background-color: #fff;
+        color: #333;
+    }
+    .menu-mobile-list .list-item-menu {
+        padding-left: 0px;
+        color: #fff;
+    }
+    .menu-mobile-list .list-item-menu .item-menu {
+        margin: 0px 22px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 10px 0px;
+    }
+    /* .list-item-menu .item-menu .icon-minus {
+        display: none;
+    } */
+    .item-menu .sub-list-item {
+        padding: 0px;
+        margin-top: 10px;
+        display: none;
+    }
+    .item-menu .sub-list-item .sub-item-menu {
+        float: left;
+        width: 50%;
+    }
+    .item-menu .sub-list-item .sub-link-item-menu {
+        color: #ffffff;
+        font-weight: 300;
+        font-size: 15px;
+        padding: 8px 0px;
+        display: block;
+    }
+    .item-menu .sub-list-item .sub-link-item-menu:hover {
+        color: rgba(255, 255, 255, 0.8);
+    }
+    .menu-mobile-list .list-item-menu .item-menu-link {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .link-icon:hover .icon {
+        color: #ffe400;
+    }
+    button.login {
+        background-color: #111;
+        font-size: 20px;
+    }
+    .logo .link-home img {
+        width: 30px;
+        height: 30px;
+    }
+    #nav-mobile-input:checked~.nav-overplay {
+        display: block;
+    }
+    #nav-mobile-input:checked+#header-mobile .menu-mobile-list {
+        transform: translate(0);
+        opacity: 1;
+    }
+    .search-mobile {
+        margin: 0px 15px;
+        position: relative;
+    }
+    .search-mobile .wrap-icon-search {
+        position: absolute;
+        top: 8px;
+        left: 14px;
+    }
+    #search-mobile {
+        height: 40px;
+        width: 100%;
+        border-radius: 8px;
+        outline: none;
+        padding: 0px 20px 0px 40px;
+        line-height: 40px;
+        font-weight: 300;
+        border: 1px solid #111;
+    }
+    #content-app {
+        background-color: #222222;
+    }
+    #content-app .content-desc {
+        padding-top: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+    .btn-more {
+        display: block;
+    }
+    .tranding {
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    .tranding h3 {
+        display: none;
+    }
+    .tranding button {
+        margin-left: 0px;
+    }
+    .tranding button .icon-tranding {
+        display: none;
+    }
+    .link-film img {
+        width: 100%;
+    }
+    #header-detail {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .tranding button .icon-tranding {
+        display: inline-block;
+    }
+    .film-item {
+        width: 16.16%;
+        margin: 0px 0.25% 10px;
+    }
+    .film-poster {
+        padding-top: 140%;
+    }
+    .tranding h3 {
+        display: block;
+    }
+    .link-film img {
+        width: 100%;
+    }
+    .detail-page .info-detail {
+        max-width: 1200px;
+    }
+}
+
+@media screen and (max-width: 998px) {
+    .tranding h3 {
+        display: none;
+    }
+    .list-film {
+        margin: 0px -0.25%;
+    }
+    .tranding button .icon-tranding {
+        display: inline-block;
+    }
+    .film-item {
+        width: 24%;
+        margin: 0px 0.5% 10px;
+    }
+    .film-poster {
+        padding-top: 140%;
+    }
+    .info-film .btn-control-wrap .add-favorite {
+        display: none;
+    }
+    .info-film .btn-control-wrap .watch-now {
+        font-size: 16px;
+    }
+    .detail-page .image-detail {
+        max-height: 350px;
+    }
+    .info-film .name-movie a {
+        font-size: 30px;
+    }
+    .info-detail-movie .image-film img {
+        width: 180px;
+    }
+    .info-detail-movie .info-film {
+        padding-left: 210px;
+    }
+}
+
+@media screen and (max-width: 759px) {
+    .list-film {
+        margin: 0px;
+    }
+    .tranding button .icon-tranding {
+        display: inline-block;
+    }
+    .film-item {
+        width: 32.33%;
+        margin: 0px 0.5% 10px;
+    }
+    .film-poster {
+        padding-top: 140%;
+    }
+    .tranding h3 {
+        display: none;
+    }
+    .info-film .btn-control-wrap .add-favorite {
+        display: none;
+    }
+    .info-film .btn-control-wrap .watch-now {
+        font-size: 16px;
+    }
+    .detail-page .image-detail {
+        max-height: 350px;
+    }
+    .info-film .name-movie a {
+        font-size: 30px;
+    }
+    .info-detail-movie .image-film img {
+        width: 140px;
+    }
+    .info-detail-movie .info-film {
+        padding-left: 160px;
+    }
+    .block-rating,
+    .block-rating .progress,
+    .image-film .like,
+    .image-film .btn-focus {
+        width: 140px;
+    }
+    .image-film .like,
+    .image-film .btn-focus {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .list-film {
+        margin: 0px -1%;
+    }
+    .film-item {
+        width: 48%;
+        margin: 0px 1% 10px;
+    }
+    .link-film img {
+        width: 100%;
+    }
+    .tab-content .list-film h3 {
+        font-size: 24px;
+        margin-bottom: 0px;
+    }
+    .tranding h3 {
+        display: none;
+    }
+    .image-film {
+        display: none;
+    }
+    .info-detail-movie .info-film {
+        padding-left: 0px;
+    }
+    /* .info-film .btn-control-wrap .watch-now {
+        padding: 0 15%;
+    } */
+    .info-film .btn-control-wrap .add-favorite {
+        display: none;
+    }
+    .info-film .name-movie a {
+        font-size: 20px;
+    }
+    .info-film .name-movie {
+        margin: 0px;
+    }
+    .list-tags {
+        margin-top: 30px;
+    }
+    .detail-page .image-detail {
+        max-height: 300px;
+    }
+    .nav-breadcrumb li {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer-logo {
+        display: none;
+    }
+    .footer-logo-mobile {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    #content-app .content-wrap {
+        max-width: 100%;
+    }
+    .list-film {
+        margin: 0px -2%;
+    }
+    #content-app .tab-content {
+        width: 100%;
+    }
+    .film-item {
+        width: 46%;
+        margin: 0px 2% 10px;
+    }
+    .link-film img {
+        width: 100%;
+    }
+    .tab-content .list-film h3 {
+        font-size: 24px;
+        margin-left: 1%;
+        margin-bottom: 0px;
+    }
+    .film-detail .film-info .film-type {
+        display: none;
+    }
+    .film-detail .name-film {
+        max-height: 36px;
+    }
+    .link-film img {
+        width: 100%;
+    }
+    .tranding h3 {
+        display: none;
+    }
+    .image-film {
+        display: none;
+    }
+    .info-detail-movie .info-film {
+        padding-left: 0px;
+    }
+    .info-film .btn-control-wrap .watch-now {
+        padding: 0 15%;
+    }
+    .info-film .btn-control-wrap .add-favorite {
+        display: none;
+    }
+    .info-film .name-movie a {
+        font-size: 20px;
+    }
+    .info-film .name-movie {
+        margin: 0px;
+    }
+    .info-film .trailer-wrap .trailer .icon-video {
+        display: none;
+    }
+    .list-tags {
+        margin-top: 30px;
+    }
+    .detail-page .image-detail {
+        max-height: 200px;
+    }
+    .detail-page .image-detail::after {
+        top: 130px;
+    }
+    .nav-breadcrumb li {
+        display: none;
+    }
+    .info-detail .info-detail-movie {
+        margin-top: 45%;
+    }
+}
